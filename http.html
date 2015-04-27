@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="yflai" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>小玩儿</title>
+        <link rel='icon' href='app.ico' type='image/x-ico' />
+        
+        <link rel="stylesheet" type="text/css" href="demo/frozenui/1.2.1/css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="demo/demo.css">
+
+    </head>
+    
+    <body ontouchstart="">
+        <script src="frozenjs/lib/sea.js"></script>
+		<script>		
+		  // Set configuration
+		  seajs.config({
+		    base: "./",
+		    alias: {
+		      "zepto": "frozenjs/lib/zepto.js"
+		    }
+		  });
+		
+		  // For development
+		  if (location.href.indexOf("?dev") > 0) {
+		    seajs.use("js/test");
+		  }
+		  // For production
+		  else {
+		    seajs.use("js/test");
+		  }
+		</script>
+        
+        
+    </body>
+
+</html>

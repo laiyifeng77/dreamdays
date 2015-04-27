@@ -92,6 +92,7 @@
         
         <script src="frozenjs/lib/zepto.min.js"></script>
         <script src="frozenjs/1.0.1/frozen.js"></script>
+        
         <script>
         window.addEventListener('load', function(){
 
@@ -108,86 +109,13 @@
 
             slider.on('scrollEnd', function() {
                 console.log('end')
-            });
-            
-            
-            
-        })
+            });   
+                   
+        });
         
-        
-        $.ajax({
-		    type : "get",
-		    //async:false,
-		    url : "http://api.pizidea.com",
-		    dataType : "jsonp",
-		    //jsonp: "callbackparam",//服务端用于接收callback调用的function名的参数
-		    //jsonpCallback:"success_jsonpCallback",//callback的function名称
-		    success : function(json){
-		        alert(json);
-		        alert(json[0].name);
-		    },
-		    error:function(){
-		        //alert('fail');
-		    }
-		});
-		
-		
-		    
-		    $(document).ready(function(){
-		        $.ajax({
-		        url: "http://api.pizidea.com",
-		        dataType: 'jsonp',
-		        processData: false,
-		        type: 'get',
-		        success: function(data) {
-		            alert('ok');
-		            alert(data);
-		        },
-		        error: function(XMLHttpRequest, textStatus, errorThrown) {
-		            alert('error');
-		            alert(XMLHttpRequest.status);
-		            alert(XMLHttpRequest.readyState);
-		            alert(textStatus);
-		        }
-		    });
-		    })
-		
-		
-        area_test_jsonp();
         </script>
         
-        <script type="text/javascript">
-		    $.getJSON("http://api.pizidea.com",function(data){
-		        alert("data="+data);
-		    });
-		
-		
-		function CallBack(data){
-		    alert(data.issingle);
-		}
-		
-		var url = 'http://api.pizidea.com';
-		function area_test_jsonp(){
-		    $.ajax({
-		        url: url,
-		        dataType: 'jsonp',
-		        processData: false,
-		        type: 'get',
-		        success: function(data) {
-		            alert('ok');
-		            alert(data);
-		        },
-		        error: function(XMLHttpRequest, textStatus, errorThrown) {
-		            alert('error');
-		            alert(XMLHttpRequest.status);
-		            alert(XMLHttpRequest.readyState);
-		            alert(textStatus);
-		        }
-		    });
-		    return false;
-		}
-		
-		</script>
+       
         
     </body>
 
